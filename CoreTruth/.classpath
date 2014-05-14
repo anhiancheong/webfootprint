@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_11"/>
+	<classpathentry kind="lib" path="postgresql-9.2-1003.jdbc4.jar"/>
+	<classpathentry kind="lib" path="guava-15.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Andrew/Documents/Georgetown/Spring 2014/Research/JSON-java-master.zip"/>
+	<classpathentry kind="lib" path="C:/Users/Andrew/Documents/Georgetown/Spring 2014/Research/org.json-20120521.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Andrew/Documents/Georgetown/Spring 2014/Research/google-gson-2.2.4-release/google-gson-2.2.4/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Andrew/Documents/Georgetown/Spring 2014/Research/commons-io-2.4/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Andrew/Documents/Georgetown/Spring 2014/Research/simplefan.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Andrew/Documents/Georgetown/Spring 2014/Research/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Andrew/Documents/Georgetown/Spring 2014/Research/mysql-connector-java-5.0.8/mysql-connector-java-5.0.8-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Andrew/Documents/Georgetown/Spring 2014/Research/mallet-2.0.7/dist/mallet.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Andrew/Documents/Georgetown/Spring 2014/Research/3.0.3/lib/trove-3.0.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

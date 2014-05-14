@@ -1,0 +1,39 @@
+import java.util.HashMap;
+
+
+
+/** Each coreExperiment represents a new experiment on the data. Each experiment has unique parameters concerning
+ * the websites used, the initial set of information and the various confidence and probability thresholds
+ * an experiment is capable of loading the relevant information from a config file 
+ * */
+public class CoreExperiment {
+
+	
+	public double confidenceThreshold = 0.0;
+	
+	public double aggregateThreshold = 0.0;
+	
+	public double websiteThreshold = 0.0;
+	
+	public int experimentID = -1;
+	
+	/**websitesUsed is a hash map of the possible websites that an experiment could use
+	 * each index in the website will look like <googleplus, true>,....
+	 * */
+	HashMap<String, Boolean> websitesUsed = new HashMap<String, Boolean>();
+	
+	/**This is a data strucutre to hold the various cores involved with the experiment.
+	 * There is a core of the initial values, an individual core for each website and a final aggregated core
+	 * */
+	//ArrayList? HashMap?
+	//Should each inference procedure be done in another core, or through a method in this class...
+	//Each end up being pretty different and it may be better to have a specialized method instead of having
+	//a core method with tons of cases and statements
+	
+	/**These variable hold the first name and last name of the person being examined. Other attribute may be added,
+	 * but the names are a minimum for the program to even function therefore are hardcoded */
+	public String first_name = "";
+	public String last_name = "";
+	
+	
+}

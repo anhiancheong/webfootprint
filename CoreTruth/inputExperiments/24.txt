@@ -1,0 +1,17 @@
+{
+  "websites": [
+    "linkedin",
+    "googleplus",
+  ],
+  "considerTweets": true,
+  "considerLinkedinExtractedAttrs" : true,
+  "experimentId" : 24,
+  "individualWebsiteThreshold": 0.8,
+  "aggregateThreshold": 0.4,
+  "confidenceThreshold_forYifang":0.4,
+  "initialCoreAttributes": [
+      "first_name",
+      "last_name",
+      "education"   
+    ]
+}

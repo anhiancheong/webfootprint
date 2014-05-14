@@ -1,0 +1,17 @@
+{
+  "websites": [
+    "linkedin",
+    "googleplus",
+    "foursquare"
+  ],
+  "considerTweets": true,
+  "considerLinkedinExtractedAttrs" : true,
+  "experimentId" : 26,
+  "individualWebsiteThreshold": 0.7,
+  "aggregateThreshold": 0.4,
+  "confidenceThreshold_forYifang":0.4,
+  "initialCoreAttributes": [
+      "first_name",
+      "last_name",
+    ]
+}

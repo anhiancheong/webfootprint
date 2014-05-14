@@ -1,0 +1,15 @@
+
+public class coreDriver {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Create the experiment
+		CoreExperiment experiment = new CoreExperiment();
+		
+	}
+
+}

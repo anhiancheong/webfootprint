@@ -1,0 +1,52 @@
+import java.util.LinkedHashMap;
+
+
+
+
+/** CoreAttribute is an object used to hold information about a particular attribute that could occur in the core
+ * And example would be 'location' which could have multiple different values and instances of those values
+ * CoreAttribute will help track this information
+ * CoreAttribute
+ * */
+public class CoreAttribute {
+
+	public CoreAttribute(String attrName) {
+		// TODO Auto-generated constructor stub
+		attributeName = attrName;
+	}
+
+	/**This label is for the type of attribute that this object is tracking
+	 * Examples include location, first_name, last_name*/
+	String attributeName  = "";
+	
+	/**This boolean tracks whether this attribute was given by the user for the experiment
+	 * For example, first and last name is ALWAYS groundTruth */
+	boolean isInitialValue = false;
+	
+	/**Hold the set of all values that have ever occured for this attribute */
+	LinkedHashMap<String, AttributeInstance> values = new LinkedHashMap<String, AttributeInstance>();
+
+	/**Sets the isInitialValue flag to true*/
+	public void isGround() {
+		// TODO Auto-generated method stub
+		isInitialValue = true;
+		
+	}
+
+	/** Will add an instance of a value for this given attribute
+	 * ex: will add "Chicago" "linkedin" .75 and pass it down into the attribute instance objects
+	 * 
+	 * */
+	public void addValue(String attrValue, String source, double prob) {
+		// TODO Auto-generated method stub
+		
+		//If the new value is not yet in the hashmap, we will add it
+		if(values.containsKey(attrValue) == false){
+			values.put(attrValue, new AttributeInstance());
+		}
+		
+		//add the value passed in to the overall attribute
+		
+	}
+	
+}

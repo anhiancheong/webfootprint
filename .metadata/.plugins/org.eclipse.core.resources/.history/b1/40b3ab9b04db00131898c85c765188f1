@@ -1,0 +1,27 @@
+
+public class coreDriver {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Create the experiment
+		CoreExperiment experiment = new CoreExperiment();
+		
+		//Config contains the paramters for the experiment
+		experiment.loadConfig("filename");
+		
+		//Config will make the initial round of DB calls to correctly population the experiment
+		experiment.initialize();
+		
+		//Will start the process of looking at websites, merging data, etc
+		experiment.run();
+		
+		//Will post all the results to the database
+		experiment.postToDB();
+		
+	}
+
+}

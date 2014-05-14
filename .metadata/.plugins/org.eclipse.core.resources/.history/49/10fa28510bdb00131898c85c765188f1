@@ -1,0 +1,35 @@
+
+
+/** attributeInstance is a unique key-value pair with augmented information about the particular value
+ * In context, a CoreAttribute will hold information about a particular attribute and it will contain a hashmap of
+ * <value, attributeInstance>. This allows attributeInstance to hold information about frequency, source and probability of the value
+ * @author Andrew
+ *
+ */
+public class AttributeInstance {
+
+	/** value is the value part of the attribute-value pair
+	 * 
+	 * */
+	String value = "";
+	
+	/*Probability of this value occuring*/
+	double probability = 0.0;
+	
+	
+	/**Holds the source of where this value came from; examples include Twitter, Linkedin, Googleplus, etc..*/
+	String source = "";
+	
+	/**Instance type indicates whether the value is a belief or a core truth
+	 * */
+	String instanceType = "";
+	
+	double entropy = 0.0;
+	
+	@Override
+	public String toString(){
+		return value;
+	}
+	
+	
+}

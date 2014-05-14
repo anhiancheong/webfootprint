@@ -1,0 +1,13 @@
+Quick information about the code.
+
+This code is for the making the actual predictions. It reads the data already stored 
+by corwins code in the database and does  
+
+1) Main class is in GenerateCore.java
+-- Read the comment marked IMPORTANT in this file before running the code
+2) DBAdaptor contains the connection details to database. You may need to change the database and username and password
+3) You may need to add postgresql drive jar file(/CoreTruth/postgresql-9.2-1003.jdbc4.jar) to the library for connecting to the database
+
+
+--- NEW EDITS BY ANDREW
+--- NEW EDITS BY ANDREW
