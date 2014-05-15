@@ -101,6 +101,8 @@ public class GenerateCoreActual {
 			hasCoreChanged[i] = false;
 
 			do {
+				/**Putting data into views is not necessarily a good approach ? -aph
+				 * will just pull down all data myself and calculate the probabilities*/
 				//This will add information to the core (one core per website)
 				this.getDataIntoViews(cores[i], false, i);
 				

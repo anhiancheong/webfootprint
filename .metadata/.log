@@ -632,3 +632,11 @@ Caused by: java.lang.NoSuchFieldError: INSTANCE
 	at java.security.AccessController.doPrivileged(Native Method)
 	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
 	... 29 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2014-05-15 12:22:26.302
+!MESSAGE An internal error occurred during: "Check Preferred PyDev Settings".
+!STACK 0
+java.lang.NoSuchFieldError: INSTANCE
+	at org.python.pydev.plugin.preferences.CheckDefaultPreferencesDialog$CheckInfo.getMissing(CheckDefaultPreferencesDialog.java:175)
+	at org.python.pydev.plugin.preferences.CheckPreferredPyDevSettingsJob.run(CheckPreferredPyDevSettingsJob.java:20)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
