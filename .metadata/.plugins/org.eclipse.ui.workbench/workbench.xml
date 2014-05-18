@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="15" version="2.0">
+<workbench progressCount="17" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="175" y="92">
 <fastViewData fastViewLocation="1024"/>
@@ -34,30 +34,60 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
 <part id="2"/>
+<part id="1"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GenerateCoreActual.java" partName="GenerateCoreActual.java" path="C:/New folder/CoreTruth/src/com/coretruth/GenerateCoreActual.java" title="GenerateCoreActual.java" tooltip="CoreTruth/src/com/coretruth/GenerateCoreActual.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GenerateCoreActual.java" partName="GenerateCoreActual.java" path="C:/Research/CoreTruth/src/com/coretruth/GenerateCoreActual.java" title="GenerateCoreActual.java" tooltip="CoreTruth/src/com/coretruth/GenerateCoreActual.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CoreTruth/src/com/coretruth/GenerateCoreActual.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2108" selectionTopPixel="1927"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8977" selectionTopPixel="2422"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="coreDriver.java" partName="coreDriver.java" path="C:/New folder/WebfootprintCore/src/coreDriver.java" title="coreDriver.java" tooltip="WebfootprintCore/src/coreDriver.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WebfootprintCore/src/coreDriver.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="317" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CoreExperiment.java" partName="CoreExperiment.java" path="C:/New folder/WebfootprintCore/src/CoreExperiment.java" title="CoreExperiment.java" tooltip="WebfootprintCore/src/CoreExperiment.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CoreExperiment.java" partName="CoreExperiment.java" path="C:/Research/WebfootprintCore/src/CoreExperiment.java" title="CoreExperiment.java" tooltip="WebfootprintCore/src/CoreExperiment.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WebfootprintCore/src/CoreExperiment.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="136"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="13050" selectionTopPixel="6015"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GenerateCore.java" partName="GenerateCore.java" path="C:/Research/CoreTruth/src/com/coretruth/GenerateCore.java" title="GenerateCore.java" tooltip="CoreTruth/src/com/coretruth/GenerateCore.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CoreTruth/src/com/coretruth/GenerateCore.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9742" selectionTopPixel="376"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CoreAttribute.java" partName="CoreAttribute.java" path="C:/Research/WebfootprintCore/src/CoreAttribute.java" title="CoreAttribute.java" tooltip="WebfootprintCore/src/CoreAttribute.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WebfootprintCore/src/CoreAttribute.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1603" selectionTopPixel="642"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AttributeInstance.java" partName="AttributeInstance.java" path="C:/Research/WebfootprintCore/src/AttributeInstance.java" title="AttributeInstance.java" tooltip="WebfootprintCore/src/AttributeInstance.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WebfootprintCore/src/AttributeInstance.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1078" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AttributeCollection.java" partName="AttributeCollection.java" path="C:/Research/WebfootprintCore/src/AttributeCollection.java" title="AttributeCollection.java" tooltip="WebfootprintCore/src/AttributeCollection.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WebfootprintCore/src/AttributeCollection.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="851" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PsqlQuery.java" partName="PsqlQuery.java" path="C:/Research/WebfootprintCore/src/PsqlQuery.java" title="PsqlQuery.java" tooltip="WebfootprintCore/src/PsqlQuery.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WebfootprintCore/src/PsqlQuery.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="19" selectionOffset="5506" selectionTopPixel="3033"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DBAdaptor.java" partName="DBAdaptor.java" path="C:/Research/CoreTruth/src/com/coretruth/DBAdaptor.java" title="DBAdaptor.java" tooltip="CoreTruth/src/com/coretruth/DBAdaptor.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CoreTruth/src/com/coretruth/DBAdaptor.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="882"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="coreDriver.java" partName="coreDriver.java" path="C:/Research/WebfootprintCore/src/coreDriver.java" title="coreDriver.java" tooltip="WebfootprintCore/src/coreDriver.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WebfootprintCore/src/coreDriver.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="990" selectionTopPixel="141"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (2 items)"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -66,6 +96,9 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1400027896238">
@@ -165,6 +198,7 @@
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
 <layout>
@@ -191,18 +225,19 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.7496136" ratioLeft="485" ratioRight="162" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
@@ -223,42 +258,160 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CoreTruth/src/com/coretruth/GenerateCoreActual.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/WebfootprintCore/src/coreDriver.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/WebfootprintCore/src/CoreExperiment.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/WebfootprintCore/src/PsqlQuery.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/WebfootprintCore/src/CoreAttribute.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/WebfootprintCore/src/AttributeCollection.java"/>
 </editors>
-<item historyLabel="GenerateCoreActual.java" index="0">
-<position info="not_deleted" x="2108" y="0"/>
+<item historyLabel="PsqlQuery.java" index="1">
+<position info="not_deleted" x="4155" y="0"/>
 </item>
-<item historyLabel="coreDriver.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="PsqlQuery.java" index="1">
+<position info="not_deleted" x="4218" y="0"/>
 </item>
-<item historyLabel="CoreExperiment.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="PsqlQuery.java" index="1">
+<position info="not_deleted" x="3012" y="0"/>
 </item>
-<item historyLabel="coreDriver.java" index="1">
-<position info="not_deleted" x="612" y="0"/>
+<item historyLabel="AttributeCollection.java" index="3">
+<position info="not_deleted" x="851" y="0"/>
 </item>
-<item historyLabel="GenerateCoreActual.java" index="0">
-<position info="not_deleted" x="2108" y="0"/>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="10174" y="0"/>
 </item>
-<item historyLabel="CoreExperiment.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="10204" y="0"/>
 </item>
-<item historyLabel="coreDriver.java" index="1">
-<position info="not_deleted" x="612" y="0"/>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="10626" y="0"/>
 </item>
-<item historyLabel="coreDriver.java" index="1">
-<position info="not_deleted" x="315" y="0"/>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="10239" y="3"/>
 </item>
-<item historyLabel="coreDriver.java" index="1">
-<position info="not_deleted" x="438" y="0"/>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="10496" y="0"/>
 </item>
-<item historyLabel="coreDriver.java" index="1">
-<position info="not_deleted" x="533" y="0"/>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="10535" y="0"/>
 </item>
-<item active="true" historyLabel="coreDriver.java" index="1">
-<position info="not_deleted" x="610" y="0"/>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="10752" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="10916" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="10988" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="11454" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="11333" y="9"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="11344" y="6"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="11366" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="11213" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="11212" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="11246" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="11246" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="11275" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="11274" y="0"/>
+</item>
+<item historyLabel="CoreAttribute.java" index="2">
+<position info="not_deleted" x="2351" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="11589" y="0"/>
+</item>
+<item historyLabel="AttributeCollection.java" index="3">
+<position info="not_deleted" x="851" y="0"/>
+</item>
+<item historyLabel="CoreAttribute.java" index="2">
+<position info="not_deleted" x="2351" y="0"/>
+</item>
+<item historyLabel="AttributeCollection.java" index="3">
+<position info="not_deleted" x="851" y="0"/>
+</item>
+<item historyLabel="CoreAttribute.java" index="2">
+<position info="not_deleted" x="2351" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="11443" y="0"/>
+</item>
+<item historyLabel="CoreAttribute.java" index="2">
+<position info="not_deleted" x="2351" y="0"/>
+</item>
+<item historyLabel="CoreAttribute.java" index="2">
+<position info="not_deleted" x="2074" y="0"/>
+</item>
+<item historyLabel="CoreAttribute.java" index="2">
+<position info="not_deleted" x="2074" y="0"/>
+</item>
+<item historyLabel="CoreAttribute.java" index="2">
+<position info="not_deleted" x="1932" y="0"/>
+</item>
+<item historyLabel="CoreAttribute.java" index="2">
+<position info="not_deleted" x="2138" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="8" y="0"/>
+</item>
+<item historyLabel="PsqlQuery.java" index="1">
+<position info="not_deleted" x="5506" y="19"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="6353" y="0"/>
+</item>
+<item historyLabel="CoreAttribute.java" index="2">
+<position info="not_deleted" x="2138" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="4359" y="0"/>
+</item>
+<item historyLabel="CoreAttribute.java" index="2">
+<position info="not_deleted" x="2138" y="0"/>
+</item>
+<item historyLabel="CoreAttribute.java" index="2">
+<position info="not_deleted" x="1567" y="0"/>
+</item>
+<item historyLabel="CoreAttribute.java" index="2">
+<position info="not_deleted" x="861" y="0"/>
+</item>
+<item historyLabel="CoreAttribute.java" index="2">
+<position/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="4359" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="13051" y="0"/>
+</item>
+<item historyLabel="CoreAttribute.java" index="2">
+<position info="not_deleted" x="3139" y="0"/>
+</item>
+<item historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="13051" y="0"/>
+</item>
+<item historyLabel="CoreAttribute.java" index="2">
+<position info="not_deleted" x="1603" y="0"/>
+</item>
+<item active="true" historyLabel="CoreExperiment.java" index="0">
+<position info="not_deleted" x="13051" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -277,11 +430,35 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CoreExperiment.java" tooltip="WebfootprintCore/src/CoreExperiment.java">
-<persistable path="/WebfootprintCore/src/CoreExperiment.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="coreDriver.java" tooltip="WebfootprintCore/src/coreDriver.java">
 <persistable path="/WebfootprintCore/src/coreDriver.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DebugOutput.java" tooltip="WebfootprintCore/src/DebugOutput.java">
+<persistable path="/WebfootprintCore/src/DebugOutput.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SimpleEntry.java" tooltip="WebfootprintCore/src/SimpleEntry.java">
+<persistable path="/WebfootprintCore/src/SimpleEntry.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DBAdaptor.java" tooltip="CoreTruth/src/com/coretruth/DBAdaptor.java">
+<persistable path="/CoreTruth/src/com/coretruth/DBAdaptor.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PsqlQuery.java" tooltip="WebfootprintCore/src/PsqlQuery.java">
+<persistable path="/WebfootprintCore/src/PsqlQuery.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AttributeCollection.java" tooltip="WebfootprintCore/src/AttributeCollection.java">
+<persistable path="/WebfootprintCore/src/AttributeCollection.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AttributeInstance.java" tooltip="WebfootprintCore/src/AttributeInstance.java">
+<persistable path="/WebfootprintCore/src/AttributeInstance.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CoreAttribute.java" tooltip="WebfootprintCore/src/CoreAttribute.java">
+<persistable path="/WebfootprintCore/src/CoreAttribute.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GenerateCore.java" tooltip="CoreTruth/src/com/coretruth/GenerateCore.java">
+<persistable path="/CoreTruth/src/com/coretruth/GenerateCore.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CoreExperiment.java" tooltip="WebfootprintCore/src/CoreExperiment.java">
+<persistable path="/WebfootprintCore/src/CoreExperiment.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GenerateCoreActual.java" tooltip="CoreTruth/src/com/coretruth/GenerateCoreActual.java">
 <persistable path="/CoreTruth/src/com/coretruth/GenerateCoreActual.java"/>
