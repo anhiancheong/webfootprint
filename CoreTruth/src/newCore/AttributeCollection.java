@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class AttributeCollection {
 
 	/*Information about the occurences of this value*/
-	ArrayList<AttributeInstance> instances = new ArrayList<AttributeInstance>();
+	ArrayList<AttributeInstance> instances;
 	
 	/*The value that this collection tracks*/
 	String attribute_value = "";
@@ -24,12 +24,13 @@ public class AttributeCollection {
 	
 	public AttributeCollection(String val){
 		attribute_value = val.replaceAll("'", "");
-	
+		instances = new ArrayList<AttributeInstance>();
 	}
 
 	public void addInstance(String source, double prob) {
 		// TODO Auto-generated method stub
 		instances.add(new AttributeInstance(attribute_value, source, prob));
+		DebugOutput.print("AttributeCollection level addInstance method called");
 		updateMaxInstance();
 	
 	}
@@ -54,6 +55,17 @@ public class AttributeCollection {
 	public double getHighestP() {
 		// TODO Auto-generated method stub
 		return maxInstance.probability;
+	}
+
+	public String getAllInstancesPrintString() {
+		// TODO Auto-generated method stub
+		String retStr = "{";
+		
+		for(int i = 0 ; i < instances.size(); i++) {
+			retStr += " " + instances.get(i).source + " P = " + instances.get(i).probability + " , " ; 
+		}
+		
+		return retStr + "}";
 	}
 	
 	

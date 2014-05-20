@@ -1,4 +1,5 @@
 package newCore;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 
@@ -29,18 +30,21 @@ public class CoreAttribute {
 	
 	/**This boolean tracks whether this attribute was given by the user for the experiment
 	 * For example, first and last name is ALWAYS groundTruth */
-	boolean isInitialValue = false;
+	boolean isInitialValue;
 	
 	
 	
 	/**Hold the set of all values that have ever occured for this attribute */
 	LinkedHashMap<String, AttributeCollection> values = new LinkedHashMap<String, AttributeCollection>();
-
+	
+	/***/
+	HashMap<String, Double> localProb;
 	
 	
 	public CoreAttribute(String attrName) {
 		// TODO Auto-generated constructor stub
 		attributeName = attrName;
+		isInitialValue = false;
 	}
 	
 	/**Sets the isInitialValue flag to true*/
@@ -63,12 +67,15 @@ public class CoreAttribute {
 		//If the new value is not yet in the hashmap, we will add it
 		if(values.containsKey(attrValue) == false){
 			values.put(attrValue, new AttributeCollection(attrValue));
+			DebugOutput.print("A new value for the attribute: " + attributeName + " has been found");
 		}
 		
 		
 		//add the value passed in to the overall attribute
 		//values.get(attrValue).addInstance(new AttributeInstance());
 		values.get(attrValue).addInstance(source, prob);
+		
+		DebugOutput.print("Value: " + attrValue + " has been added! ");
 		
 		updateMax();
 		
@@ -78,10 +85,19 @@ public class CoreAttribute {
 	/**This method is for debug purposes*/
 	public String getPrintStr() {
 		// TODO Auto-generated method stub
+		updateMax();
+		
+		DebugOutput.print("Number of values for attribute: " + attributeName + " is: " + values.keySet().size());
+		
 		String retStr = attributeName;
 		retStr += "   isInitialValue: " + isInitialValue;
 		
-		retStr += "   Values:  " + values.keySet().toString();
+		retStr += "   Values:  ";
+		for(String key: values.keySet()){
+			retStr += "  " + values.get(key).attribute_value + "(" + values.get(key).maxInstance.source + " -- P = " + localProb.get(key) + ")";
+			//retStr += " \n Other Values: " + values.get(key).getAllInstancesPrintString();
+		}
+		
 		
 		return retStr;
 	}
@@ -89,16 +105,35 @@ public class CoreAttribute {
 	public void updateMax(){
 		
 		double tempMaxP = 0.0;
+		updateValuesProb();
 		for(String value: values.keySet()){
 			if(values.get(value).getHighestP() > tempMaxP) {
 				currentMaxValue = value;
 				currentMaxSource = values.get(value).maxInstance.source;
-				tempMaxP = values.get(value).getHighestP();
+				tempMaxP = localProb.get(currentMaxValue);
 			}
 		}
 		
 	}
 	
+	/**Each value will individually have a probability relative to other values
+	 * ie if Paris occurs 3 times and london occurs once, I will want a probability of .75 for paris and .25 for london*/
+	public void updateValuesProb(){
+		
+		double totalCount = 0.0;
+		localProb = new HashMap<String, Double>();
+		//Calculate the total number of counts of value occurences for this value
+		for(String key: values.keySet()){
+			totalCount += (double)values.get(key).getCount();
+		}
+		
+		//Calculate the probability for each value relative to other values
+		for(String key: values.keySet()){
+			localProb.put(key, (double)values.get(key).getCount()/totalCount);
+		}
+		
+		
+	}
 
 	public String getAttributeName() {
 		// TODO Auto-generated method stub

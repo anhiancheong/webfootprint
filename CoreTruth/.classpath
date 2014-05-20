@@ -13,5 +13,7 @@
 	<classpathentry kind="lib" path="C:/Users/Andrew/Documents/Georgetown/Spring 2014/Research/mysql-connector-java-5.0.8/mysql-connector-java-5.0.8-bin.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Andrew/Documents/Georgetown/Spring 2014/Research/mallet-2.0.7/dist/mallet.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Andrew/Documents/Georgetown/Spring 2014/Research/3.0.3/lib/trove-3.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Research/lib (1)/lib/mallet-deps.jar"/>
+	<classpathentry kind="lib" path="C:/Research/lib (1)/lib/trove-2.0.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -211,8 +211,12 @@ public class PsqlQuery {
 	
 	public void close(){
 		try {
-			curStmt.close();
-			conn.close();
+			if(conn != null) {
+				conn.close();
+			}
+			if(curStmt != null) {
+				curStmt.close();
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -286,9 +290,9 @@ public class PsqlQuery {
 	public String getPopEngineID(String first_name, String last_name) {
 		// TODO Auto-generated method stub
 		String returnID = "-1";
-		String idQuery = "select user_id from core where attribute_name = 'first_name' and attribute_value = '"
+		String idQuery = "select user_id from core where attribute_name = 'name_givenname' and attribute_value = '"
 			+ first_name
-			+ "' INTERSECT (select user_id from core where attribute_name = 'last_name' and attribute_value = '"
+			+ "' INTERSECT (select user_id from core where attribute_name = 'name_familyname' and attribute_value = '"
 			+ last_name + "')";
 		
 		try{
@@ -312,6 +316,9 @@ public class PsqlQuery {
 	public ArrayList<AttributeInstance> getPopAttr(String userIDForYifangDB, double confidenceThreshold) {
 		// TODO Auto-generated method stub
 		
+		DebugOutput.print("Getting population inference engine results");
+		ArrayList<AttributeInstance> returnInstances = new ArrayList<AttributeInstance>();
+		
 		try {
 			WebFootPrint.mainFunction();
 		} catch (Exception e) {
@@ -326,6 +333,8 @@ public class PsqlQuery {
 		
 		currentQuery = getPredict;
 		
+		DebugOutput.print("Predict Table query is: " + currentQuery);
+		
 		execute();
 		
 		try {
@@ -338,7 +347,10 @@ public class PsqlQuery {
 				double confidence = currentResultSet.getDouble("confidence");
 				String algorithm = currentResultSet.getString("algorithm");
 				
+				returnInstances.add(new AttributeInstance(attrName, attrValue, attrGroup, confidence, algorithm));
+				
 				//STORE THE ATTRIBUTES!!!!!!
+				DebugOutput.print("Iterating over prediction attributes - " + attrName);
 				
 			}
 			
@@ -347,7 +359,7 @@ public class PsqlQuery {
 			e.printStackTrace();
 		}
 		
-		return null;
+		return returnInstances;
 	}
 
 

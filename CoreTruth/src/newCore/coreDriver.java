@@ -8,6 +8,14 @@ public class coreDriver {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		String first = "amber";
+		String last = "renee";
+		if(args.length > 1) {
+			first = args[0];
+			last = args[1];
+		}
+		
+		
 		DebugOutput.debugOn = true;
 		//Create the experiment
 		CoreExperiment experiment = new CoreExperiment();
@@ -28,7 +36,7 @@ public class coreDriver {
 		//Config will make the initial round of DB calls to correctly population the experiment
 			//Should it take an array of the other values???
 			DebugOutput.print("Inference Starting");
-			experiment.initialize("sarah", "kendel");
+			experiment.initialize(first, last);
 			
 			//Will start the process of looking at websites, merging data, etc
 			experiment.run();

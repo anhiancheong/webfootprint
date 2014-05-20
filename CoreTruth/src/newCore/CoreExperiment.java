@@ -62,7 +62,7 @@ public class CoreExperiment {
 	 * but the names are a minimum for the program to even function therefore are hardcoded */
 	public String first_name = "";
 	public String last_name = "";
-	public int gtID = -1;
+	public int gtID;
 	
 	/**These two booleans handle cases for looking at expected values or not*/
 	public boolean considerTweets = false;
@@ -80,6 +80,11 @@ public class CoreExperiment {
 	//To pull down the initial values, this array will provide all the possible sources of that information
 	String[] allWebsites = {"googleplus", "facebook", "linkedin"};
 	
+	
+	public CoreExperiment(){
+		gtID = -1;
+		experimentID = -1;
+	}
 	
 	/** This method will read a json configured file and load the various run parameters
 	 *  I just used Tavish's code for this part
@@ -244,6 +249,30 @@ public class CoreExperiment {
 		
 		DebugOutput.print("Starting Inference process");
 		
+
+		
+		doWebsiteTableScans(true);
+		
+		getPredictedPopulationAttributes();
+		
+		/*Do population inference engine run*/
+		
+		/*Continue doing website inference until no changes have been made*/
+		
+		/**change will track whether a new maximum or new value has been added to the set of beliefs*/
+		boolean change = true;
+		while(change == true) {
+			DebugOutput.print("New website scan");
+			change = doWebsiteTableScans(false);
+		}
+		
+		
+	}
+
+	private boolean doWebsiteTableScans(boolean initialOnly) {
+		// TODO Auto-generated method stub
+		boolean retBool = false;
+		
 		/*
 		 * ALGORITHM...
 		 * Look at the getDataIntoView subroutine and the getP for a lot of the work of the actual inference
@@ -256,35 +285,23 @@ public class CoreExperiment {
 			//Run query for all attributes for those ids
 			//iterate over attributes and values
 			PsqlQuery idQuery = new PsqlQuery();
-			ResultSet idQueryResults = idQuery.makeIDQuery(last_name, first_name, curWebsite, attributes, true);
-			//idQuery.execute();
+			ResultSet idQueryResults = idQuery.makeIDQuery(last_name, first_name, curWebsite, attributes, initialOnly);
 			
-			//ResultSet idQueryResults = idQuery.getResultSet();
 			
 			HashMap<String, ArrayList<String>> websiteAttr = idQuery.makeWebsiteAttrQuery(curWebsite, idQueryResults);
-			//idQuery.execute();
-			
+					
 			//ResultSet websiteAttr = idQuery.getResultSet();
 			//Will go through all returned attributes and iterate over them and add the significant ones to the core
 			//populateCoreFromWebsiteAttributes(websiteAttr);
 			
-			DebugOutput.print("" + websiteAttr.size());
+			DebugOutput.print(curWebsite + " found attributes: " + websiteAttr.size());
 			
 			//Will iterate through attributes, count all attributes of same type on the given website to find probabilty
-			addAttributesToCore(websiteAttr, curWebsite);
+			retBool = addAttributesToCore(websiteAttr, curWebsite);
 			
 		}
 		
-		
-		getPredictedPopulationAttributes();
-		
-		
-		
-		/*Do population inference engine run*/
-		
-		/*Continue doing website inference until no changes have been made*/
-		
-		
+		return retBool;
 	}
 
 	/**This method will be the launching point for the population inference engine part
@@ -309,6 +326,19 @@ public class CoreExperiment {
 		
 		//loop over all the attributes, add the ones over the threshold, check for different names
 		
+		for(int i = 0; i < popEngineAttr.size(); i++) {
+			
+			//MAY NEED TO DO SOME NAME MAPPING HERE
+			String currentAttrName = popEngineAttr.get(i).name;
+			
+			if(!attributes.containsKey(currentAttrName)){
+				attributes.put(currentAttrName, new CoreAttribute(currentAttrName));
+			}
+			
+			attributes.get(currentAttrName).addValue(popEngineAttr.get(i).value, popEngineAttr.get(i).source, popEngineAttr.get(i).probability);
+			DebugOutput.print("New value added: " + currentAttrName + " : " + popEngineAttr.get(i).value);
+		}
+		
 		
 	}
 
@@ -316,11 +346,13 @@ public class CoreExperiment {
 	 * 
 	 * 
 	 * HashMap dimensions are <attribute name, attribute values[]>
+	 * @return 
 	 * */
-	private void addAttributesToCore(
+	private boolean addAttributesToCore(
 			HashMap<String, ArrayList<String>> websiteAttr, String source) {
 		// TODO Auto-generated method stub
 		
+		boolean retBool = false;
 		Set<String> attributeNames = websiteAttr.keySet();
 		
 		
@@ -353,9 +385,14 @@ public class CoreExperiment {
 				//If the value is greater than the website threshold, we want to add it to the core
 				if(probForAttrVal > websiteThreshold){
 					
-					if(!attributes.containsKey(attrValue)){
+					if(!attributes.containsKey(attrName)){
+						
+						DebugOutput.print("NEW ATTRIBUTE NAME!!!");
+						
 						attributes.put(attrName, new CoreAttribute(attrName));
+						retBool = true;
 					}
+					
 					
 					attributes.get(attrName).addValue(attrValue, source, probForAttrVal);
 					DebugOutput.print("Value added to the core! " + attrName + " -- " + attrValue);
@@ -369,11 +406,12 @@ public class CoreExperiment {
 		
 		
 		
-		
+		return retBool;
 	}//end method
 
 
 
+	/** This method will create a collection of strings, each of which is a DB query to the finalcore table */
 	public void postToDB() {
 		// TODO Auto-generated method stub
 		
@@ -382,6 +420,17 @@ public class CoreExperiment {
 		 * store all the posting queries into an array list, then execute them one by one
 		 * 
 		 * */
+		
+		ArrayList<String> finalCoreQueries = new ArrayList<String>();
+		
+		//add the set of all queries
+		for(String attr: attributes.keySet()){
+			finalCoreQueries.addAll(attributes.get(key).getQueries());
+		}
+		
+		
+		PsqlQuery finalCoreTableQuery = new PsqlQuery();
+		finalCoreTableQuery.postFinalCore(finalCoreQueries);
 		
 	}
 
